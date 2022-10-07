@@ -1,0 +1,146 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    line-height: 18px;
+}
+
+body {
+    background-color: #E5E5E5;
+}
+
+.main-container {
+    margin: 100px auto;
+    width: 375px;
+    height: 766px;
+    background-color: #F4F4F4;
+}
+
+header {
+    background-color: #1B83E2;
+    height: 66px;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 24px;
+    color: #F4F4F4;
+    text-align: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+main {
+    margin: 0px 24px;
+}
+
+.converter-label {
+    font-weight: 400;
+    font-size: 14px;
+    color: #777777;
+    margin-top: 24px;
+    display: block;
+}
+
+.value-label {
+    font-weight: 700;
+    font-size: 14px;
+    color: #777777;
+    margin-top: 24px;
+    margin-bottom: 6px;
+    display: block;
+    display: block;
+}
+
+select {
+    background-color: #FFFFFF;
+    width: 327px;
+    height: 48px;
+    margin-top: 4px;
+    border: 1px solid #BBBBBB;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    cursor: pointer;
+    padding-left: 11px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #555555;
+    appearance: none;
+    outline: none;
+}
+
+input {
+    background-color: #FFFFFF;
+    width: 327px;
+    height: 48px;
+    margin-top: 4px;
+    border: 1px solid #BBBBBB;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    padding-left: 11px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #555555;
+}
+
+button {
+    height: 48px;
+    width: 100%;
+    margin-top: 24px;
+    background: #1B83E2;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    color: #F4F4F4;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button:active {
+    opacity: 0.7;
+}
+
+section {
+    width: 100%;
+    height: 276px;
+    margin-top: 36px;
+    border: 1px solid #1B83E2;
+    border-radius: 4px;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 14px
+}
+
+#currency-img-dolar,
+#currency-img-euro,
+#currency-img-bitcoin {
+    display: inline;
+    padding-left: 47px;
+}
+
+#real-text,
+#currency-text {
+    text-align: center;
+    font-weight: 400;
+    font-size: 14px;
+    color: #777777;
+    margin-top: 4px;
+}
+
+#real-value,
+#currency-value {
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    color: #1B83E2;
+    margin-top: 3px;
+}

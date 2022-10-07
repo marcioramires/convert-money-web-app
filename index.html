@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css" />
+    <title>DevClub Convert Money</title>
+</head>
+
+<body>
+    <div class="main-container">
+        <header>
+            <h1>DevClub Convert Money</h1>
+        </header>
+        <main>
+            <label class="converter-label">
+                Converter <b>de</b>
+            </label>
+            <select>
+                <option>R$ Real Brasileiro</option>
+            </select>
+            <label class="converter-label">
+                Converter <b>para</b>
+            </label>
+            <select id="select-currency">
+                <option>US$ <b>Dólar americano</b></option>
+                <option>€ <b>Euro</b></option>
+                <option>Bitcoin</option>
+            </select>
+            <label class="value-label">
+                Valor
+            </label>
+            <input id="input-real" placeholder="R$ 10.000,00"></input>
+            <button>Converter</button>
+            <section>
+                <div id="container-real"><img src="./assets/brasil.png" alt="bandeira-real-brasil" />
+                    <p id="real-text">Real</p>
+                    <p id="real-value">R$ 10.000,00</p>
+                </div>
+                <img src="./assets/vector.png" alt="seta-baixo" />
+                <div id="container-currency">
+                    <img id="currency-img-dolar" src="./assets/united-states.png" alt="bandeira-moeda-convertida" />
+                    <img id="currency-img-euro" src="./assets/euro.png" alt="bandeira-moeda-convertida" />
+                    <img id="currency-img-bitcoin" src="./assets/bitcoin.png" alt="bandeira-moeda-convertida" />
+                    <p id="currency-text">Escolha sua moeda e</p>
+                    <p id="currency-value">converta</p>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+<script src="./scripts.js">
+</script>
+
+</html>
