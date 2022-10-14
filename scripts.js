@@ -5,9 +5,17 @@ const dolarImg = document.getElementById('currency-img-dolar')
 const euroImg = document.getElementById('currency-img-euro')
 const bitcoinImg = document.getElementById('currency-img-bitcoin')
 
-const dolar = 5.2
-const euro = 5.12
-const bitcoin = 104545.57
+let dolar, euro, bitcoin
+
+fetch( 'https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL').then( response => {
+    return response.json()
+}).then (dataCurrency => {
+    dolar = dataCurrency.USDBRL.bid
+    euro = dataCurrency.EURBRL.bid
+    bitcoin = dataCurrency.BTCBRL.bid
+
+    return dolar, euro, bitcoin
+})
 
 const currencyConverter = () => {
     const realValue = document.getElementById('input-real').value
