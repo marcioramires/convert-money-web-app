@@ -15,7 +15,6 @@ const currencyConverter = async () => {
     const dataCurrency = await fetch( 'https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL').then( response => {
     return response.json()
 })
-    console.log (dataCurrency)
     let dolar = dataCurrency.USDBRL.bid
     let euro = dataCurrency.EURBRL.bid
     let bitcoin = dataCurrency.BTCBRL.bid
