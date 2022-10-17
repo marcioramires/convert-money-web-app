@@ -5,24 +5,20 @@ const dolarImg = document.getElementById('currency-img-dolar')
 const euroImg = document.getElementById('currency-img-euro')
 const bitcoinImg = document.getElementById('currency-img-bitcoin')
 
-let dolar, euro, bitcoin
-
-fetch( 'https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL').then( response => {
-    return response.json()
-}).then (dataCurrency => {
-    dolar = dataCurrency.USDBRL.bid
-    euro = dataCurrency.EURBRL.bid
-    bitcoin = dataCurrency.BTCBRL.bid
-
-    return dolar, euro, bitcoin
-})
-
-const currencyConverter = () => {
+const currencyConverter = async () => {
     const realValue = document.getElementById('input-real').value
     const realValueText = document.getElementById('real-value')
     const currencyValue = document.getElementById('currency-value')
     const currencyValueText = document.getElementById('currency-text')
     const currency = document.getElementById('select-currency').value
+
+    const dataCurrency = await fetch( 'https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL').then( response => {
+    return response.json()
+})
+    console.log (dataCurrency)
+    let dolar = dataCurrency.USDBRL.bid
+    let euro = dataCurrency.EURBRL.bid
+    let bitcoin = dataCurrency.BTCBRL.bid
 
     realValueText.innerHTML = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(realValue)
 
